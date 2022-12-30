@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Clone repository') {
-            steps {
-                git 'https://github.com/daniyalj/jenkins-docker.git'
-            }
-        }
         stage('Build image') {
             steps {
                 sh 'docker build -t myimage:latest .'
